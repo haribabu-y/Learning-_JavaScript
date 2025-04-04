@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidding the HTML element on the page</title>
+    <script>
+        console.log("Hello World!!");
+        console.log("Hi Evevry one !!");
+
+        console.log(document.getElementById("para1").innerHTML);
+        console.log(document.getElementById("para1").innerText);
+        
+        
+        
+    </script>
+</head>
+<body>
+    <h1>Hidding the HTML element on the page</h1>    
+    <p id="para1">Click on the button to hide this text along with its space on the page.</p>
+    <button onclick="document.getElementById('para1').style.display='none'">Click me!</button>
+    <p id="para2">Click on the button to hide the text without hidding its space on the page.</p>
+    <button onclick="document.getElementById('para2').style.visibility='hidden'">Click me!</button>
+</body>
+</html>
