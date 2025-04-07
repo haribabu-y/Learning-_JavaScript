@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Using Object Names</h2>
+    <p id="demo"></p>
+    <h2>Using Loop</h2>
+    <p id="demo2"></p>
+    <h2>Using Object.values()...</h2>
+    <p id="demo3"></p>
+    <h2>Using Object.entries()....</h2>
+    <p id="demo4"></p>
+    <h2>Using JSON.stringify()...</h2>
+    <p id="demo5"></p>
+
+    <script>
+        const person = {
+            "name" : "Hari",
+            "age": 22,
+            "city": "Chittoor"
+        }
+
+        document.getElementById("demo").innerHTML = "Name: " + person.name + "<br> Age: " + person.age + "<br> City: " + person.city
+    </script>
+    <script>
+        const car = {
+            "name": 'Thor',
+            "model": 'Roxx',
+            "price": 1200000,
+            "color": 'Black'
+        }
+
+        let all = "";
+        for (x in car) {
+            all += car[x] +" ";
+        }
+
+        document.getElementById("demo2").innerHTML = all;
+    </script>
+
+    <script>
+        const person2 = {
+            "name" : "Hari",
+            "age": 22,
+            "city": "Chittoor"
+        }
+
+        let mydetails = Object.values(person2);
+
+        document.getElementById("demo3").innerHTML = mydetails;
+    </script>
+
+<script>
+    const fruits = {Bananas:300, Oranges:200, Apples:500}; 
+    
+    let text = "";
+    for (let [fruit, amount] of Object.entries(fruits)) {
+      text += fruit + ": " + amount + "<br>";
+    }
+    
+    document.getElementById("demo4").innerHTML = text;
+    </script>
+
+    <script>
+        const person3 = {
+            'name': "Hari",
+            'age': 22,
+            'city': "Chittoor"
+        }
+
+        let mystring = JSON.stringify(person3)
+
+        document.getElementById("demo5").innerHTML = mystring;
+    </script>
+
+</body>
+</html>

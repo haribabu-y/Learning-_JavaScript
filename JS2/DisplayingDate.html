@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displaying Date and Time By using Javascript Events</title>
+</head>
+<body>
+    <h1>Displaying Date and Time usng Javascript Events</h1>
+    <p>click on the below button to diaplsy the date and time</p>
+    <button onclick="document.getElementById('demo1').innerHTML = Date()">Click me!</button>
+    <p id="demo1"></p>
+
+    <button onclick="this.innerHTML = Date()">Click me!</button>
+
+    <h2>Using Javascript function</h2>
+    <button onclick="displayDate()">Click me!</button>
+    <p id="demo2"></p>
+
+    <script>
+        function displayDate() {
+            document.getElementById("demo2").innerHTML = Date();
+        }
+    </script>
+
+    <h2>Understanding the addEventListener function</h2>
+    <button onclick="addEventListener('click', function() {
+        alert('Button is clicked!')
+    })">Click me!</button><br><br><br>
+
+    <h4>addEventListener function</h4><br><br>
+
+        <input type="text" id="myInput" placeholder="Type something" />
+
+        <script>
+        const input = document.getElementById("myInput");
+
+        input.addEventListener("focus", () => {
+            console.log("Input focused");
+        });
+
+        input.addEventListener("input", (e) => {
+            console.log("You typed: " + e.target.value);
+        });
+
+        input.addEventListener("blur", () => {
+            console.log("Input lost focus");
+        });
+        </script>
+
+</body>
+</html>

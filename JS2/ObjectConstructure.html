@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Constructors</title>
+</head>
+<body>
+    <h2>Constructor object</h2>
+    <p id="demo"></p>
+    <script>
+        function person(first, last, age, city) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.city = city;
+            this.nationality = "Indian";
+            this.fullName = function() {
+                return this.firstName + " " + this.lastName;
+            };
+        }
+
+        const mydetails = new person("Hari", "Babu", 22, "Chittoor");
+
+        document.getElementById("demo").innerHTML = "my name is "+ mydetails.firstName + "<br> My Nationality is " + mydetails.nationality + "<br> My Full name is "+ mydetails.fullName();
+    </script>
+</body>
+</html>

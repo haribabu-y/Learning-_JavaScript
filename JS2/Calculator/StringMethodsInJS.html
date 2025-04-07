@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String methods in javascript..</title>
+</head>
+<body>
+    <h1>String Methods in Javascript</h1>
+    <p>Open console to see the results</p>
+    <script>
+        let str = "AbcdeFGHIJKLmnopqRstUVWxYZ";
+
+        console.log("String: " + str);
+        console.log("Length of the String: "+str.length);
+        console.log("Character at position 5 is " + str.charAt(4));
+        console.log("Character code for A is " + str.charCodeAt(0));
+        console.log(str.at(-2));
+        console.log(str[5]);
+        console.log(str.slice(7, 13));
+        console.log(str.slice(13));
+        console.log(str.slice(-13));
+        console.log(str.substring(7,13));
+        console.log("The substring() method takes the 0 for the negative indexing   "+str.substring(-14));
+        console.log("It will display the character from starting index 5 to the next 6 characters     "+str.substr(5, 6));
+        console.log(str.substr(4));
+        console.log(str.substr(-8));
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+        console.log(str.concat(str, " Hello"));
+        console.log(str.concat(" ", "hello"));
+        console.log(str.padStart(4,"o"));
+        console.log(str.padEnd(4,"o"));
+        console.log(str.repeat(2));
+        console.log(str.replace("A","a"));
+        const myarray = str.split("");
+        console.log(myarray);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+        
+    </script>
+</body>
+</html>
