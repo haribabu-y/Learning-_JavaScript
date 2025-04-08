@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterating thr Array using flatMap() Method</title>
+</head>
+<body>
+    <h1>Javascripe Arrays</h1>
+    <h2>Iterating Using Map() Method</h2>
+    <p>The flatMap() method first maps all elements of an array and then creates a new array by flattening the array.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const arr = [1,2,3,4,5,6,7,8]
+        const newarr = arr.flatMap((x) => [x, x*2]);
+        document.getElementById("demo").innerHTML = newarr;
+    </script>
+</body>
+</html>

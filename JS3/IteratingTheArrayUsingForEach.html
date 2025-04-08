@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let text = "<ul>";
+            fruits.forEach(myFunction)
+        text += "</ul>";
+
+        function myFunction(value) {
+            text += "<li>" + value + "</li>";
+        }
+
+        fruits.forEach((fruit, index) => {
+            console.log(`${index}: ${fruit}`);
+        });
+
+        fruits.forEach(fruit => console.log(fruit));
+
+        document.getElementById("demo").innerHTML = text;
+
+        let list = "<ul>";
+            fruits.forEach(fruit => {
+                list += `<li> ${fruit} </li>`;
+            });
+        list += "</ul>";
+
+        document.getElementById("demo1").innerHTML = list;
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Sets</h1>
+<h2>The keys() Method</h2>
+
+<p>The keys() method returns a Set Iterator with all the values from a Set.</p>
+
+<p id="demo"></p>
+
+<script>
+// Create a Set
+const letters = new Set(["a","b","c"]);
+
+// Create an Iterator
+const myIterator = letters.keys();
+
+// List all Elements
+let text = "";
+for (const x of myIterator) {
+  text += x + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>

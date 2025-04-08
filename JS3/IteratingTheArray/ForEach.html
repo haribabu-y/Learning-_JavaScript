@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterating the array by using forEach..</title>
+</head>
+<body>
+    <h1>Javascript Arrays</h1>
+    <h2>The forEach() Method</h2>
+    <p>Call a function once for each array element:</p>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        const num = [45, 4, 9, 16, 25];
+        let text = "";
+        num.forEach(myFunction);
+        document.getElementById("demo").innerHTML = text;
+
+        function myFunction(value, index, array) {
+            text += value + "<br>";
+        }
+
+        let txt = "";
+        num.forEach(myFunction2);
+        document.getElementById("demo2").innerHTML = txt;
+
+        function myFunction2(value) {
+            txt += value + "<br>";
+        }
+    </script>
+</body>
+</html>

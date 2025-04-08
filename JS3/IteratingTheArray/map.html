@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterating the Array Using Map() Method</title>
+</head>
+<body>
+    <h1>Javascripe Arrays</h1>
+    <h2>Iterating Using Map() Method</h2>
+    <p>Create a new array by performing a function on each array element:</p>
+
+    <p id="demo"></p>
+    <script>
+        const num1 = [45, 4, 9, 16, 25];
+        const num2 = num1.map(myFunction);
+        document.getElementById("demo").innerHTML = num2;
+
+        function myFunction(value, index, array) {
+            return value;
+        }
+    </script>
+</body>
+</html>
