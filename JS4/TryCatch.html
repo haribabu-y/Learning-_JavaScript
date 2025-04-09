@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p>Enter the number between 5 to 10:</p>
+    <div>
+        <input type="text" id="val">
+        <button onclick="myFunction()">Test Here!</button>
+        <p id="demo"></p>
+    </div>
+
+    <script>
+    function myFunction() {
+        const message = document.getElementById('demo');
+        // message.innerHTML= "";
+        let x = document.getElementById("val").value;
+        try {
+            if(x.trim() == "") throw "empty";
+            if(isNaN(x)) throw "not a number";
+            x = Number(x);
+            if(x < 5) throw "too low";
+            if(x > 10) throw "too big";
+            message.innerHTML = x;
+        } catch(err) {
+            message.innerHTML = "Input is " + err;
+        }// finally {
+        //     document.getElementById("val").value = "";
+        // }
+    }
+    </script>
+</body>
+</html>

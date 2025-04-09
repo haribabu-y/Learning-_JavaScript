@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Function call() Method</h1>
+    <p>The call() method is a predefined JavaScript method.<br>
+
+        It can be used to invoke (call) a method with an object as an argument (parameter).</p>
+    <p id="demo"></p>
+    <script>
+        const person = {
+            fullName : function() {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+        const person1 = {
+            firstName: "Hari",
+            lastName: "babu"
+        }
+        const person2 = {
+            firstName: "Hari1",
+            lastName:"babu"
+        }
+
+        document.getElementById("demo").innerHTML = person.fullName.call(person1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object Constructor Functions</h1>
+    <pre>
+        Sometimes we need to create many objects of the same type.
+        
+        To create an object type we use an object constructor function.
+        
+        It is considered good practice to name constructor functions with an upper-case first letter.</pre>
+        <p id="demo"></p>
+        <p id="demo2"></p>
+        <script>
+            function person(first, last, age, city) {
+                this.firstName = first;
+                this.lastname = last;
+                this.age = age;
+                this.city = city;
+                this.eyeColor = "Black";
+            }
+
+            const mySelf = new person("Hari", "babu", 22, "Chittoor");
+
+            document.getElementById("demo").innerHTML = "My age is " + mySelf.age;
+            // Iterating the Object My Using for-in loop
+            for(key in mySelf) {
+                console.log(key + ": "+ mySelf[key]);
+                
+            }
+            // Iterating the Object By using Object.keys() + forEach Loop
+            let txt  = "";
+            Object.keys(mySelf).forEach(key => {
+                txt += key +": " +mySelf[key]+"<br>";
+            });
+            document.getElementById("demo2").innerHTML = txt;
+
+            // Iterating the object by using for-of loop with Object.entries() method
+            for(let [key, value] of Object.entries(mySelf)) {
+                console.log(key+": "+ value);
+            }
+
+            // Iterating the Object by using the Object.values()+forEach loop
+            Object.values(mySelf).forEach(value => {
+                console.log(value);
+            });
+
+            
+        </script>
+</body>
+</html>

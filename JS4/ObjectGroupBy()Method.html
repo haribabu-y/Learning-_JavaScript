@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objct.groupBy() method </h1>
+    <p>The Object.groupBy() method groups elements of an object according to string values returned from a callback function.</p>
+    <p id="demo"></p>
+    <script>
+        const fruits = [
+            {name:"Apples", quantity:300},
+            {name:"Banans", quantity:500},
+            {name:"Oranges", quantity:200},
+            {name:"kiwi", quantity:150}
+        ];
+
+        //Callback function to group the elements
+        function myCallFunction({quantity}) {
+            return quantity > 200 ? "ok" : "low";
+        }
+
+        const result = Object.groupBy(fruits, myCallFunction);
+
+        let txt = "These fruits are ok: <br>"
+        for(let [x,y] of result.ok.entries()) {
+            txt += y.name + " " + y.quantity + "<br>";
+        }
+        txt += "<br> These fruits are low: <br>";
+        for(let [x,y] of result.low.entries()) {
+             txt += y.name + " " + y.quantity + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = txt;
+    </script>
+</body>
+</html>

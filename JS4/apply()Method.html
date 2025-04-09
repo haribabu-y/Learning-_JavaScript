@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>apply() Method</h1>
+    <p>The apply() method is similar to the call() method (previous chapter).</p>
+    <p id="demo"></p>
+
+    <script>
+        const nums = [2,4,66,656,74,3,5,35,5,554,5];
+        document.getElementById("demo").innerHTML = "The Max value in the array is " + Math.max.apply(null, nums);
+    </script>
+</body>
+</html>

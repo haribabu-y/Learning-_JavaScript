@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printing Radom numbers</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: lightgreen;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Printing Ramdom Numbers</h1>
+    <div>
+        <button onclick="random(1,7)" id="rand">Click</button>
+        <p id="demo"></p>
+    </div>
+
+    <script>
+        function random(min, max) {
+            let num = Math.floor((Math.random() * (max-min) + min));
+            document.getElementById("demo").innerHTML = num;
+        }
+    </script>
+</body>
+</html>
