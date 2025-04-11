@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Manipulating the attribute value in the document</h1>
+    <p>Click on the button to change the image</p>
+    <button onclick="changeImage()">Click To Change!</button><br>
+    <img src="/lighton.png" alt="bulbImage" id="image" width="200px" height="200px">
+    <script>
+        function changeImage() {
+            // let imag = document.getElementById("image");
+            // imag.src = "/OIP.jpg";
+
+            let imag = document.images;
+            imag[0].src = "/OIP.jpg";
+        }
+    </script>
+</body>
+</html>

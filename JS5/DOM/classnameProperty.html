@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="title" class="main message">Heading 1</h1>
+
+    <script>
+        let title = document.getElementById("title");
+        // the below will override the title element 
+        //  title.className = "new title";
+        // The below add the new class to the existing class
+        title.className += " new";
+        //it will print the whole html element
+        console.log(title);
+        //it will print only class name of the element
+        console.log(title.className);
+    </script>
+</body>
+</html>

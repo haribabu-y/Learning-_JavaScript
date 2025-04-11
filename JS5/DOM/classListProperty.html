@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo" class="main message">My Heading</h1>
+
+    <script>
+        let classname = document.getElementById("demo");
+        // it will all the class names as a list 
+        console.log(classname.classList);
+        // by using this we can add or remove new class name to the element
+        // we can also add multiple class names to the class
+        classname.classList.add("new", "new2", "new3")
+        console.log(classname);
+        // removing existing class name in the element
+        classname.classList.remove("new2", "new3")
+        console.log(classname); 
+        // we can also replace the values of the class
+        classname.classList.replace("main", "msg");
+        console.log(classname);
+        // we can also check weather the class name present in the class by using contains() method
+        // it will return the boolean value as result
+        let asclass = classname.classList.contains("message");
+        console.log(asclass);
+        
+        // now we see the method called toggle() 
+        // this method is used to check weather the class name present in the element 
+        //if it is present t will remove thatname and if it is not present it will add new class name to the element
+        //in the below there is no class name main so it will the new class name to the element
+        classname.classList.toggle("main");
+        console.log(classname);
+
+        classname.classList.toggle("msg");
+        console.log(classname);
+        
+        
+    </script>
+</body>
+</html>

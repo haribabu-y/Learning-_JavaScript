@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- <div>
+    <p id="demo">JavaScript DOM</p>
+   </div> 
+
+   <div>
+    <h1 class="heading">First Heading</h1>
+    <div id="msg">
+        <h1 class="heading">Second Heading</h1>
+        <h1 class="heading">Third Heading</h1>
+    </div>
+   </div>
+---------------------------------------------------------------------
+        selecting Parent node -->
+   <!-- <div class="title">
+    <p class="text"> Welcome to My Webpage</p>
+   </div> 
+   ---------------------------------------------------
+        Getting child elements -->
+        <!-- <div class="title">
+            <p> Welcome to My Webpage1</p>
+            <p> Welcome to My Webpage2</p>
+            <p> Welcome to My Webpage3</p>
+            <p> Welcome to My Webpage4</p>
+            <p> Welcome to My Webpage5</p>
+           </div> 
+------------------------------------------------
+        fing the sibling elements-->
+        <div class="title">
+            <p> Welcome to My Webpage1</p>
+            <p> Welcome to My Webpage2</p>
+            <p class="second"> Welcome to My Webpage3</p>
+            <p> Welcome to My Webpage4</p>
+            <p> Welcome to My Webpage5</p>
+           </div>
+
+   <script>
+        // let message = document.getElementById("demo");
+        // console.log(message.textContent);
+
+        // let cont = document.querySelectorAll("div, h1");
+        // // let msg = cont.getElementsByClassName("heading");
+        // console.log(cont);
+
+        //getting parent element
+        // let txt = document.querySelector(".text");
+        // console.log(txt.parentNode)
+        
+        // getting child element
+        // let parent = document.querySelector(".title");
+        // console.log(parent.firstChild);//it will display text due to having space at the first child to solve thid we use
+        // console.log(parent.firstElementChild);// it used to access first child
+        // console.log(parent.lastElementChild);// it display the last element in the div element
+        // console.log(parent.childNodes);// it will display the list all the childs along with spaces in the parent    
+
+        //finding the sibling elements 
+        let child = document.querySelector(".second");
+        console.log(child.previousElementSibling);// accessing the previous sibling 
+        console.log(child.nextElementSibling);// accessing the next sibling 
+        console.log(child.parentElement);// accessing the parent element
+
+        
+        
+        
+        
+        
+   </script>
+</body>
+</html>

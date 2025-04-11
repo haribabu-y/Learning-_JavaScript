@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="username" id="username" placeholder="enter username" value="Hari"
+    style="background-color: aqua; font-size: 25px; width: 300px; text-align: center;">
+
+    <script>
+        let inputbox = document.getElementById("username");
+        //getting the attribute using getattbute
+        console.log(inputbox.getAttribute("placeholder"));
+        //setting the new attribute to the element
+        inputbox.setAttribute("class", "user")
+        console.log(inputbox)
+        inputbox.style.backgroundColor = "blue";
+        // Checking the attribute present in the element
+        //it will return boolean value as a result
+        console.log(inputbox.hasAttribute("class"));
+        //removing the attribute from the element
+        inputbox.removeAttribute("class")
+        console.log(inputbox);
+
+        //returnin the style properties to the console
+        console.log(inputbox.style);
+        // Adding new style to element
+        inputbox.style.padding = "20px";
+        console.log(inputbox.style);
+        //overriding the css properties
+        // now just change the operator to += add style proretis instard of overriding the style 
+        inputbox.style.cssText = "width: 300px;height: 30px;color: blue;background-color: green";
+        console.log(inputbox.style);
+        
+        
+       
+    </script>
+</body>
+</html>

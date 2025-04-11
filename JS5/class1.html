@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        class car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+
+            age() {
+                return (new Date().getFullYear()) - this.year;
+            }
+
+            get cnam() {
+                return this.name;
+            }
+
+            set cnam(x) {
+                this.name = x;
+            }
+        }
+
+        mycar = new car("Thor", 2022);
+        mycar.se
+        document.getElementById("demo").innerHTML = "My car age is "+ mycar.age();      
+        
+    </script>
+</body>
+</html>

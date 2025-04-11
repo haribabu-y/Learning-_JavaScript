@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Blog</li>
+        <li style="display: none;">Project</li>
+    </ul>
+    
+    <script>
+        // Creating new HTML element and appending it to the html document
+        // let div = document.createElement("div");
+        // div.innerHTML = "<p>Welcome to my Webpage";
+        
+        // document.body.appendChild(div);
+        // div.title = "title";
+        // div.className = "divclass";
+        // console.log(div);
+
+        // Appending new element to the exising element
+        let menu = document.getElementById("menu");
+
+        let list1 = document.createElement("li");
+        list1.innerHTML = "Contact";
+
+        // menu.appendChild(list1);
+
+        console.log(menu.textContent);
+
+        //after() Method:  it is used to add new node or string after the element
+        let nextele = document.createElement("p");
+        nextele.innerHTML = "Adding p node after the menu element"
+        menu.after(nextele)
+        //directly give the string inside the after() method to insert or add string
+        menu.after("srting1", " string2", " string3")
+
+        // append() method we can add multiple element to the parent
+        
+        
+    </script>
+</body>
+</html>
