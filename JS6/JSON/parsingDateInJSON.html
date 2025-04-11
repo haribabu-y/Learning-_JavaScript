@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P>Below are the Object without parsing the date</P>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+        const myJSON = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+        const myObj = JSON.parse(myJSON);
+
+        let txt = "";
+        for(i in myObj) {
+            txt += myObj[i] +"<br>";
+        }
+        document.getElementById("demo").innerHTML = txt;
+
+        myObj.birth = new Date(myObj.birth);
+
+        let text = "";
+        for(i in myObj) {
+            text += myObj[i] +"<br>";
+        }
+        document.getElementById("demo2").innerHTML = text;
+    </script>
+</body>
+</html>

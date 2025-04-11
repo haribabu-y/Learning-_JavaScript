@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>eval() Method in JS</h2>
+    <p id="demo"></p>
+
+    <script>
+        let str = "String";
+        console.log(typeof str);
+        let str2 = eval(str);
+        console.log(typeof str2);
+
+        let str3 = "() => {return 10+20}";
+        let str4 = eval(str3);
+        console.log(typeof str4);
+        console.log(str4());
+        
+        
+        
+        
+    </script>
+</body>
+</html>

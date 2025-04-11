@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            background-color: aqua;
+            border: 2px solid black;
+            padding: 50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Javascript RemoveeventListener() Method</h1>
+    <div id="div1">
+        <p>This div element has a onmousemove event handler that displays a random numbers every time you move your mouse inside this orange filed.</p>
+        <p>Click on the button to remove the div's event handler.</p>
+        <button onclick="removeHandler()" id="btn">Remove</button>
+    </div>
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("div1").addEventListener("mousemove", myFunction);
+        function myFunction() {
+            document.getElementById("demo").innerHTML = Math.round(Math.random()*11);
+        }
+        function removeHandler() {
+            document.getElementById("div1").removeEventListener("mousemove", myFunction);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            cursor: pointer;
+        }
+        h2 {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p>Click on the belocw to see changes</p>
+    <h1 onclick="this.innerHTML = 'Ooops! '">Clock on this text!!</h1>
+
+    <p>Changed the event using JS function</p>
+    <h2 onclick="changeText(this)">Click on this text!!</h2>
+
+    <script>
+        function changeText(id) {
+            id.innerHTML = "Ooops!!"
+        }
+    </script>
+</body>
+</html>

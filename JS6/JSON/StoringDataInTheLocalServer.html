@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Storing data in the local server and retrieving the date from the local server</h2>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+        const data = {name: "John", age: 31, city: "New York"};
+        const data2 = {name: "Hari", age: 22, city: "Chittoor"};
+        const strdata = JSON.stringify(data);
+        const strdata2 = JSON.stringify(data2);
+        //Storing the data in the local server
+        localStorage.setItem("Date", strdata);
+        localStorage.setItem("Data2", strdata2);
+
+        //retrieving the data from the local server
+
+        const rdata = localStorage.getItem("Data2");
+        console.log(rdata)
+        const rdataobj = JSON.parse(rdata);
+        console.log("Name: " + rdataobj.name + "\n" + "Age: " + rdataobj.age);
+        document.getElementById("demo").innerHTML = ("Name: " + rdataobj.name + "<br>" + "Age: " + rdataobj.age + "<br>" + "City: " + rdataobj.city)
+
+    </script>
+</body>
+</html>

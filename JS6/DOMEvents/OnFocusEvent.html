@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>onfocus Example</title>
+  <style>
+    input:focus {
+      outline: none;
+    }
+  </style>
+  <script>
+    function highlightInput(element) {
+      element.style.backgroundColor = "lightyellow";
+    }
+
+    function resetInput(element) {
+      element.style.backgroundColor = "white";
+    }
+  </script>
+</head>
+<body>
+
+  <h2>onfocus Event Example</h2>
+  <p>Click inside the input field to trigger the onfocus event.</p>
+
+  <input type="text" onfocus="highlightInput(this)" onblur="resetInput(this)" placeholder="Type something...">
+
+</body>
+</html>

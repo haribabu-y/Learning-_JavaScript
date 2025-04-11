@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Javascript HTML events</h1> 
+   <h2>onMouseOver and onMouseOut events</h2>
+
+   <p>Move the mouse over the div element to see changes</p>
+   
+   <div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"
+   style="background-color: red; width: 300px; height: 20px;color: white; padding:40px; text-align: center;">Mouse over me</div>
+
+   <script>
+    function mouseOver(value) {
+        value.innerHTML = "Thank you";
+    } function mouseOut(value) {
+        value.innerHTML = "Mouse over me";
+    }
+   </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript HTML events</h1>
+    <h2>mouseDown and mouseUp events</h2>
+    <p>ouble click and hold on the below div element</p>
+
+    <div onmousedown="mouseDown(this)" onmouseup="mouseUp(this)"
+    style="background-color: aqua;width: 120px;height: 20px;padding: 40px;text-align: center;">Click me</div>
+
+    <script>
+        function mouseDown(value) {
+            value.style.backgroundColor = "blue";
+            value.style.color = "white";
+            value.innerHTML = "Realese Me";
+        }
+
+        function mouseUp(value) {
+            value.style.backgroundColor = "aqua";
+            value.style.color = "black";
+            value.innerHTML = "Thank you!"
+        }
+    </script>
+</body>
+</html>
