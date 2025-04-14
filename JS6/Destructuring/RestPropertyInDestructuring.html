@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Destructuring</h1>
+    <p>You can end a destructuring syntax with a rest property.</p>
+    <p id="demo"></p>
+    <script>
+        // Create an Array
+        const numbers = [10, 20, 30, 40, 50, 60, 70];
+        const [a,b, ...rest] = numbers;
+
+        document.getElementById("demo").innerHTML = "First element: " + a + "<br> Second Element: " + b + "<br> Rest elements as array : " + rest;
+    </script>
+</body>
+</html>

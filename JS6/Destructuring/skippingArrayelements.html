@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Destructuring</h1>
+    <h3>Skipping Array values</h3>
+    <p>open console to see the result</p>
+    <script>
+        //creating an array
+        const fruits = ["Bananas", "Oranges", "Apples", "Mangos"];
+
+        //destructuring
+        let[f1,,,f4] = fruits;
+
+        console.log("First fruit: "+ f1);
+        console.log("Last fruit: "+f4);        
+        
+    </script>
+</body>
+</html>

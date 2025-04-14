@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>open console to see the result</p>
+
+    <script>
+        function fun1(callback) {
+            console.log("Fun1 is running...");
+
+            setTimeout(() => {
+                console.log("4 seconds passed...");
+                callback();                
+            }, 4000);
+        }
+
+        function fun2() {
+            console.log("fun2 is called after 4 seconds!");
+        }
+
+        fun1(fun2);
+    </script>
+</body>
+</html>

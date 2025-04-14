@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Destructuring</h1>
+    <h3>Array position values</h3>
+    <p>We can pick up values from specific index locations of an array:</p>
+    <p>open console to see result</p>
+
+    <script>
+        const fruits = ["Bananas", "Oranges", "Apples", "Mangos"];
+
+        let {[0]:f1, [2]:f3} = fruits;
+
+        console.log("First fruit: " + f1);
+        console.log("Third fruit: " + f3);
+        
+        
+    </script>
+</body>
+</html>

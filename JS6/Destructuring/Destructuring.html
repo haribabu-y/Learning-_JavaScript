@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Destructuring</h1>
+    <p id="demo"></p>
+
+    <script>
+        const person = {
+            firstName: "Hari",
+            lastName: "babu",
+            age: 22
+        };
+        let {firstName, lastName, country = "India"} = person;
+        document.getElementById("demo").innerHTML ="FirstName: "+ firstName + "<br> LastName: " + lastName +"<br> Age: "+ person.age + "<br> Country: " + country;
+    </script>
+</body>
+</html>

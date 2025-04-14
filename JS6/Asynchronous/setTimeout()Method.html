@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Asynchronous</h1>
+    <p>When using the JavaScript function setTimeout(), you can specify a callback function to be executed on time-out:</p>
+    <p>The date will be displayed in three seconds</p>
+    <p id="demo"></p>
+
+    <script>
+        setTimeout(myFunction, 3000);
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = Date();
+        };
+    </script>
+</body>
+</html>

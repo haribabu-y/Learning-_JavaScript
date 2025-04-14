@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            background-color: green; 
+        }
+        .new {
+            background-color: lightgreen !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Checking if element allows multiple class names</h1>
+    <p id="para" class="main message" class="new">This is a paragraph</p>
+    <p>This is second paragraph</p>
+
+    <script>
+        let title = document.getElementById("para");
+        title.classList.add("new");
+        console.log(title.classList)
+        title.classList.remove("new");
+        title.classList.replace("message", "msg")
+        console.log(title.classList);
+        //checking the class is present in the element
+        console.log(title.classList.contains("message"));
+        //toggle method
+        title.classList.toggle("message");
+        console.log(title.classList);
+        
+
+        
+        
+        let classname = document.getElementsByClassName("new");
+        console.log(classname[0]);
+        
+    </script>
+</body>
+</html>

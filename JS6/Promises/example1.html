@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Promise object</h1>
+    <h2>the then() method</h2>
+    <p id="demo"></p>
+    <p id="demo1" class="main mesage" class="new"></p>
+
+    <script>
+        function displayres(res) {
+            document.getElementById("demo").innerHTML = res;
+        }
+        let mypromise = new Promise(function(resolve,reject) {
+            let x = 10;
+
+            if(x >= 0) {
+                resolve("OK");
+            } else {
+                reject("Error");
+            }
+        });
+
+        mypromise.then(
+            function(value) {displayres(value);},
+            function(error) {displayres(error);}
+        );
+    </script>
+</body>
+</html>
